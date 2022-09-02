@@ -1,7 +1,17 @@
-Ligne de code à ajouter : 
+<p align="center"><img src="https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg" width=200 height=200></p>
+
+# Démonstration de l'application mobile Acteam-IT
+Projet pour une démonstration de la technologie React-native
+
+# Lancer l'app:
+```
+expo run:android
+```
+
+## Ligne de code à ajouter pour l'installation(sans dossier Android): 
 
 - Android/build.gradle
-
+```
 	allprojects {
 		repositories {
 			// maven for expo-camera
@@ -11,9 +21,9 @@ Ligne de code à ajouter :
 			}
 		}
 	}
-
+```
 - Android/app/build.gradle
-
+```
 	android {
 		packagingOptions { 
 			pickFirst 'lib/x86/libc++_shared.so' 
@@ -24,9 +34,9 @@ Ligne de code à ajouter :
 			pickFirst 'lib/armeabi-v7a/libc++_shared.so' 
 		}
 	}
-
+```
 - Android/app/src/main/AndroidManifest.xml
-
+```
 	< manifest >
 		<uses-permission android:name="android.permission.CAMERA"/>
   		<uses-permission android:name="android.permission.INTERNET"/>
@@ -37,9 +47,9 @@ Ligne de code à ajouter :
   		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
   		<uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
 	</ manifest >
-
+```
 - app.json
-
+```
 	"expo": {
 		"plugins": [
 			"@config-plugins/react-native-blob-util",
@@ -54,4 +64,4 @@ Ligne de code à ajouter :
 			]
 		]
 	}
-
+```
